@@ -9,20 +9,23 @@ body {
     --font-silver: #dadada;
     --accent-gray: #aeadb0;
     background-color: var(--accent-gray);
-    margin: 0; 
+    margin: 0 20px;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-width: 300px;
     align-items: center;
-    color: var(--font-black)
+    color: var(--font-black);
+}
+
+h1, nav, main, footer {
+    max-width: 1200px;
 }
 
 h1 {
     font-size: 5rem;
     color: var(--font-dark);
     width: 100%;
-    max-width: 1200px;
     text-align: center;
     padding: 70px 0;
     background-image: url("./img/sunset3.png");
@@ -33,10 +36,9 @@ h1 {
 
 nav {
     background-color: var(--sharp-orange);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     width: 100%;
-    max-width: 1200px;
     padding: 20px 0;
 }
 
@@ -51,71 +53,128 @@ nav {
         margin: 0 30px;
     }
 
-main {
-    background-color: var(--beige);
-    width: 100%;
-    max-width: 1200px;
-}
-
 .icon {
     padding-right: 10px;
     height: 1.5rem;
 }
 
-.icon:hover {
-    transform: scale(1.25);
+    .icon:hover {
+        transform: scale(1.25);
+    }
+
+main {
+    background-color: var(--beige);
+    width: 100%;
 }
 
-.projects-cont {
-    border: 1px solid purple;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    .about-me {
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        margin: 30px;
+    }
+
+        .about-me-img {
+            margin: 20px 0;
+        }
+
+        .about-me-card {
+            background-color: var(--slate);
+            color: var(--font-silver);
+            /* border: 1px solid blue; */
+            height: 275px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .diy {
+            font-weight: 600;
+        }
+
+        .diy:hover {
+            font-size: 2rem;
+        }
+
+    .project, .project-img {
+        width: 325px;
+    }
+
+    .projects-cont {
+        /* border: 1px solid purple; */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px);
+        justify-content: center;
+        gap: 40px 25px;
+        margin: 30px 0;
+    }
+
+        .project {
+            background-color: var(--slate);
+            border-bottom: 5px solid var(--sharp-orange);
+            border-radius: 3px;
+            color: var(--font-silver);
+            box-shadow: 7px 5px 5px #9a958d;
+            position: relative;
+        }
+
+        .project-img {
+            padding: 0;
+            height: 300px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+        .project-sub {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .project-name {
+            margin: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .project-text {
+            margin: 10px;
+            font-size: 1rem;
+            background: var(--silver);
+        }
+
+        .project-btns {
+            margin: 10px 0 ;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+
+footer {
+    display: flex;
     justify-content: center;
-    gap: 25px;
+    background-color: var(--slate);
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
 }
 
-    .project {
-        background-color: var(--slate);
-        border-bottom: 5px solid var(--sharp-orange);
-        border-radius: 3px;
-        color: var(--font-silver);
-        box-shadow: 7px 5px 5px #9a958d;
-        width: 300px;
-        position: relative;
-        margin: 20px;
+    h2 {
+        font-size: 2.5rem;
+        margin: 10px 0;
     }
 
-    .project-img {
-        padding: 0;
-        width: 300px;
-        height: 300px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-    }
-
-    .project-sub {
+    .contact-cont {
         display: flex;
         flex-direction: column;
-        position: relative;
+        margin: 0 30px;
+        max-width: 450px;
     }
 
-    .project-name {
-        margin: 10px;
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-
-    .project-text {
-        margin: 10px;
-        font-size: 1rem;
-        background: var(--silver);
-    }
-
-    .project-btns {
-        margin: 10px 0 ;
-        top: 0;
-        right: 0;
-        position: absolute;
+    .contact-card {
+        display: flex;
+        align-items: center;
+        line-height: 2rem;
     }
 
 @media (max-width: 1000px) {
