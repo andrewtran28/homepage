@@ -1,0 +1,69 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --beige: #e2d8cc;
+    --sharp-orange: #ff6054;
+    --slate-blue: #6a6e76;
+    --font-black: #2f2620;
+    --silver: #dadada;
+    --accent-gray: #aeadb0;
+}
+
+body {
+    background-color: var(--beige);
+    margin: 0 200px; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-black)
+}
+
+nav {
+    border: 1px solid red;
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sharp-orange);
+    max-width: 1000px;
+}
+
+.icon {
+    padding-right: 20px;
+    height: 1.5rem;
+}
+  
+.projects {
+    border-left: 5px solid var(--sharp-orange);
+    box-shadow: 2px 3px rgb(192, 192, 192);
+    height: 200px;
+    position: relative;
+}
+
+@media (max-width: 1000px) {
+body {
+    background: green;
+}
+}
+
+@media (max-width: 800px) {
+body {
+    background: lightskyblue;
+}
+}
