@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     --beige: #e2d8cc;
     --beige-shadow: #9a958d;
     --sharp-orange: #ff6054;
@@ -11,13 +12,12 @@ body {
     --font-silver: #dadada;
     --accent-gray: #aeadb0;
     background-color: var(--accent-gray);
-    margin: 0 20px;
+    margin: 0 30px;
     padding: 0;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    min-width: 300px;
     align-items: center;
-    color: var(--font-black);
 }
 
 h1, nav, main, footer {
@@ -25,12 +25,13 @@ h1, nav, main, footer {
 }
 
 h1 {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 5rem;
     color: var(--font-dark);
     width: 100%;
     text-align: center;
     padding: 70px 0;
-    background-image: url("./img/sunset3.png");
+    background-image: url("./img/sunset.png");
     background-size: cover;
     background-position: 50% 50%;
     margin: 0;
@@ -38,13 +39,14 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
+    font-weight: 400;
     margin: 20px 0;
 }
 
 nav {
     background-color: var(--sharp-orange);
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--font-silver);
     width: 100%;
     padding: 20px 0;
@@ -54,6 +56,7 @@ nav {
         display: flex;
         justify-content: center;
         margin: 0;
+        padding: 0;
         list-style: none;
     }
 
@@ -67,6 +70,22 @@ nav {
         border-radius: 5px;
         transform: scale(1.1);
         box-shadow: 2px 2px 2px var(--font-dark);
+    }
+
+.about-btns {
+    margin: 15px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+    .contact-icon {
+        padding-right: 10px;
+        height: 2rem;
+    }
+
+    .contact-icon:hover {
+        transform: scale(1.25);
     }
 
 .icon {
@@ -87,9 +106,6 @@ main {
     .about-me {
         display: flex;
         align-items: center;
-
-
-        padding: 40px 80px;
     }
 
         header {
@@ -110,7 +126,10 @@ main {
         .img-name {
             position: absolute;
             bottom: 0;
+            padding: 5px 0;
             font-size: max(2.25vw, 2.75rem);
+            font-weight: 400;
+            color: var(--font-silver);
         }
 
         .about-me-card {
@@ -122,9 +141,9 @@ main {
             box-shadow: 0 5px 5px var(--beige-shadow);
         }
 
-        .about-me-desc {
-            line-height: 1.5rem;
-        }
+            .about-me-text {
+                line-height: 1.5rem;
+            }
 
     .project, .project-img {
         width: 400px;
@@ -134,7 +153,8 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fill, 450px);
         justify-content: center;
-        gap: 40px 25px;
+        justify-items: center;
+        gap: 40px 20px;
         margin: 30px 0;
     }
 
@@ -163,24 +183,23 @@ main {
         .project-name {
             margin: 10px;
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 400;
         }
 
         .project-text {
-            margin: 10px;
+            margin: 10px 10px;
             font-size: 1rem;
             background: var(--silver);
         }
 
         .project-btns {
-            margin: 10px 0 ;
+            margin: 10px 0;
             top: 0;
             right: 0;
             position: absolute;
         }
 
 footer {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     background-color: var(--purple-accent);
@@ -193,15 +212,20 @@ footer {
     .contact-cont {
         display: flex;
         flex-direction: column;
+        position: relative;
         margin: 0 50px;
         max-width: 450px;
     }
 
-    .contact-card {
-        display: flex;
-        align-items: center;
-        line-height: 2rem;
-    }
+        .contact-card {
+            display: flex;
+            align-items: center;
+            line-height: 2rem;
+        }
+
+        .contact-btns {
+            margin: 10px 0;
+        }
 
     #contact-img {
         margin: 0 -10px;
@@ -210,7 +234,6 @@ footer {
 
 @media (max-width: 1000px) {
     body {
-        background: green;
         margin: 0 10px;
     }
 
@@ -218,36 +241,49 @@ footer {
         font-size: 4.5rem;
     }
 
-    header {
-        border: 1px solid purple;
+    nav {
+        font-size: 1.5rem;
+    }
+
+    li {
+        margin: 0 10px;
     }
 
     .about-me {
-        border: 1px solid red;
+        display: block;
     }
 
     .about-me-img-cont {
-        border: 1px solid green;
-    }
-
-    .about-me-img {
-
+        float: left;
+        margin: 0 -50px 0px 0px;
+        width: 450px;
+        height: auto;
+        left: 11vw;
+        z-index: 1;
     }
 
     .img-name {
-
+        text-wrap: nowrap;
+        position: relative;
+        left: -5vw;
     }
 
     .about-me-card {
-        border: 1px solid blue;
+        padding: 40px;
+        margin: 60px 20px 30px 60px;
     }
 
     footer {
         flex-wrap: wrap;
     }
+
+    #contact-img {
+        margin: 0;
+        max-width: 100%;
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     body {
         margin: 0;
     }
@@ -255,25 +291,63 @@ footer {
     h1 {
         font-size: 3.5rem;
     }
-    
+
+    nav {
+        font-size: 1.25rem;
+    }
+
+    li {
+        margin: 0;
+        padding: 5px;
+    }    
+
+    li:hover {
+        border-radius: 4px;
+        transform: scale(1);
+        box-shadow: 1px 1px 1px var(--font-dark);
+    }
+
     main {
         margin: 0;
         justify-content: center;
     }
 
     .about-me {
+        display:flex;
         justify-content: center;
         flex-wrap: wrap;
         margin: 0;
     }
 
-    .about-me-card {
-        border: 1px solid red;
+    .about-me-img-cont {
+        width: auto;
         margin: 0;
+        left: 0;
+    }
+
+    .img-name {
+        left: unset;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .about-me-card {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .about-me-img-cont picture {
+        height: 340px;
     }
 
     #contact-img {
         margin: 0;
         max-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-me-img-cont {
+        max-height: 277px;
     }
 }

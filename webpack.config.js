@@ -22,25 +22,17 @@
 	  module: {
 	    rules: [
 	      {
-			test: /\.css$/i,
-			use: ["style-loader", "css-loader"],
+		test: /\.css$/i,
+		use: ["style-loader", "css-loader"],
 	      },
 	      {
-			test: /\.html$/i,
-			loader: "html-loader",
+		test: /\.html$/i,
+		loader: "html-loader",
 	      },
 	      {
-			test: /\.(png|svg|jpg|jpeg|gif)$/i,
-			type: "asset/resource",
+		test: /\.(png|svg|jpg|jpeg|gif)$/i,
+		type: "asset/resource",
 	      },
-		  {
-			test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
-			loader: "url-loader",
-			options: {
-				limit: 10000,
-				name: '[name].[ext]'
-				}
-		  },
 	    ],
 	  },
 	};
