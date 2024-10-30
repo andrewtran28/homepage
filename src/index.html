@@ -18,19 +18,28 @@
         </nav>
 
         <main>
-            <section class="about-me">
-                <img class="about-me-img" src="./img/minglee.png">
-                <div class="about-me-card">
-                    <h2>About me</h2>
-                    <p class="about-me-desc">Hey there! I am a self-taught programmer who wants to pursue a career in web development. My original background comes from electrical engineering, working with power system distribution for buildings. I have always been a <span class="diy"><em>DIY</em>*</span>, hands-on kind of guy who enjoys designing and creating things. Hobbies of mine include wood-working, 3D printing, rock-climbing, and of course... video games.</p>
-                    <div class="project-btns">
-                        <a href="https://github.com/andrewtran28/battleship">
-                            <img class="icon" src="./img/icons/github-mark.png"></a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://andrewtran28.github.io/battleship/">
-                            <img class="icon" src="./img/icons/external-link.png"></a>
-                    </div>
-                </div>
-            </section>
+                <header>
+                    <section class="about-me">
+                        <div class="about-me-img-cont">
+                            <picture>
+                                <source srcset="./img/minglee.png" media="(min-width: 1000px)">
+                                <img class="topImage" src="./img/minglee-2.png" alt="">
+                            </picture>
+                            <div class="img-name">Andrew Tran</div>
+                        </div>
+                        <div class="about-me-card">
+                            <h2>About me</h2>
+                            <p class="about-me-desc">Hey there! I am a self-taught programmer who wants to pursue a career in web development. My original background comes from electrical engineering, working with power system distribution for buildings. I have always been a <em>DIY</em>, hands-on kind of guy who enjoys designing and creating things. Hobbies of mine include wood-working, 3D printing, rock-climbing, and of course... video games.</p>
+                            <div class="project-btns">
+                                <a href="https://github.com/andrewtran28/battleship">
+                                    <img class="icon" src="./img/icons/github-mark.png"></a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://andrewtran28.github.io/battleship/">
+                                    <img class="icon" src="./img/icons/external-link.png"></a>
+                            </div>
+                        </div>
+                    </section>
+                </header>
+ 
 
             <section class="projects-cont">
                 <div class="project">
@@ -131,7 +140,11 @@
                 </p> 
                 
             </div>
-            <img id="contact-img" src="./img/minglee2.png">
+            <picture>
+                <source id="contact-img" media="(max-width: 1050px)" srcset="./img/minglee2-2.png">
+                <img id="contact-img" src="./img/minglee2.png" alt="">
+              </picture>
+            <!-- <img id="contact-img" src="./img/minglee2.png"> -->
         </footer>
     </body>
 </html>
